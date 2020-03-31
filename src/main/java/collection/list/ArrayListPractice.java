@@ -25,8 +25,8 @@ public class ArrayListPractice {
         list.add("Четыре");
         list.add("Пять");
 //        б) Добавить шестой элемент в третию позицию. Добавить седьмой элемент в первую позицию.
-        list.add(2,"Шесть");
-        list.add(0,"Семь");
+        list.add(2, "Шесть");
+        list.add(0, "Семь");
 //        в) Записать в новый список все элементы предыдущего списка.
         list1.addAll(list);
 
@@ -68,7 +68,7 @@ public class ArrayListPractice {
 //  8. Вернуть первый подходящий элемент:
 //        а) Возращаем Первый элемент Делящийся на 3.
         List<Integer> numbers = new ArrayList<Integer>();
-        for (int i = 1; i < 10 ; i++) {
+        for (int i = 1; i < 10; i++) {
             numbers.add(i);
         }
         divideFirstOnThree(numbers);
@@ -76,7 +76,7 @@ public class ArrayListPractice {
 //  9. Возвращаем все элементы удовлетворяющие условию:
 //        а) Возвращаем все элементы делящиеся на 3
         List<Integer> numbers1 = new ArrayList<Integer>();
-        for (int i = 0; i < 100 ; i++) {
+        for (int i = 0; i < 100; i++) {
             numbers1.add(i);
         }
         divideOnThree(numbers1);
@@ -124,13 +124,13 @@ public class ArrayListPractice {
 
 
     public static List<String> modifiedList(List<String> list) {
-            List<String> anotherList = new ArrayList<String>();
-            for (int i = 0; i < list.size(); i++) {
-                if (i%3 == 0) {
-                    anotherList.add(list.get(i));
-                }
+        List<String> anotherList = new ArrayList<String>();
+        for (int i = 0; i < list.size(); i++) {
+            if (i % 3 == 0) {
+                anotherList.add(list.get(i));
             }
-            return anotherList;
+        }
+        return anotherList;
     }
 
     public static int equalsElements(List<String> list) {

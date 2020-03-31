@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Person implements Comparable<Person>, Cloneable{
+public class Person implements Comparable<Person>, Cloneable {
     private String name;
     private String surName;
     private int age;
@@ -29,6 +29,13 @@ public class Person implements Comparable<Person>, Cloneable{
     }
 
     public int compareTo(Person person) {
-        return getSurName().compareTo(person.getSurName()) == 0 ? getName().compareTo(person.getName()) == 0 ? getAge() - person.getAge();
+
+        return (getName().compareTo(person.getName())) == 0 ? (getAge() - person.getAge()) : getSurName().compareTo(person.getSurName());
+    }
+
+
+    @Override
+    public String toString() {
+        return "Surname: " + surName + ", name: " + name + ", age = " + age;
     }
 }
